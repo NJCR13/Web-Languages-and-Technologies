@@ -1,4 +1,8 @@
-# ltw-project-ltw03g06
+# Web Languages and Technologies
+
+# Group
+
+ Project made by 3 members
 
 ## Features
 
