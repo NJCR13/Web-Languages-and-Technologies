@@ -1,34 +1,45 @@
-# Web Languages and Technologies
+# Freelancer Marketplace Website  
 
-# Group
+A web application that simulates a **freelancing platform**, where clients can hire freelancers for services and administrators can manage the system.  
+The project was built using **PHP**, **SQLite3**, **HTML**, and **CSS**, focusing on user management, service listings, and client–freelancer interactions.  
 
- Project made by 3 members
+---
 
-## Features
+## Project Overview  
+The platform allows different roles (Users, Freelancers, Clients, and Admins) to interact in a simplified online freelancing ecosystem.  
+It provides account management, service creation and hiring, review mechanisms, and admin control over categories and users.  
 
-**User:**
-- [x] Register a new account.
-- [x] Log in and out.
-- [x] Edit their profile, including their name, username, password, and email.
+## Features  
 
-**Freelancers:**
-- [x] List new services, providing details such as category, pricing, delivery time, and service description, along with images or videos.
-- [x] Track and manage their offered services.
-- [x] Respond to inquiries from clients regarding their services and provide custom offers if needed.
-- [x] Mark services as completed once delivered.
+### Users  
+- Register a new account.  
+- Log in and log out.  
+- Edit profile details (name, username, password, email).  
 
-**Clients:**
-- [x] Browse services using filters like category, price, and rating.
-- [x] Engage with freelancers to ask questions or request custom orders.
-- [x] Hire freelancers and proceed to checkout (simulate payment process).
-- [x] Leave ratings and reviews for completed services.
+### Freelancers  
+- Create and list new services with category, pricing, delivery time, and description.  
+- Upload images or videos for services.  
+- Manage and update offered services.  
+- Communicate with clients, answer inquiries, and create custom offers.  
+- Mark services as completed after delivery.  
 
-**Admins:**
-- [x] Elevate a user to admin status.
-- [x] Introduce new service categories and other pertinent entities.
-- [x] Oversee and ensure the smooth operation of the entire system.
+### Clients  
+- Browse and search services using filters (category, price, rating).  
+- Ask questions or request custom orders from freelancers.  
+- Hire freelancers and simulate the payment process.  
+- Leave ratings and reviews for completed services.  
 
-**Extra:**
+### Admins  
+- Promote a user to **Admin** status.  
+- Add new service categories and other system entities.  
+- Oversee and ensure smooth operation of the platform.  
+
+---
+
+## 🛠️ Tech Stack  
+- **Backend:** PHP  
+- **Database:** SQLite3  
+- **Frontend:** HTML, CSS  
 
 ## Running
 
@@ -41,3 +52,9 @@
 - alicej/alicepass
 - bobw/bobpasss
 - mikeb/mikepass
+
+## Developers
+
+- Alexandre Morais up201906049@up.pt
+- Nuno Ramos nunoramos2142@gmail.com
+- https://github.com/PriestMarmore
