@@ -1,0 +1,1445 @@
+html {
+    height:100%;
+    background-color: #181414;
+    color:white;
+    font-family: "Inter", sans-serif;
+    /* font-optical-sizing: auto; */
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.style-content {
+    flex: 1;
+}   
+
+/* 
+/////////////////////////////////////////// HEADER ///////////////////////////////////////////
+*/
+
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0;
+    margin:0;
+    height:6em;
+    background-color: #383434;
+}
+
+.header_form {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+    padding:1em;
+}
+
+header img{
+    padding: 1em;
+}
+
+header a {
+    display:flex;
+    text-decoration: none;
+    color: white;
+}
+
+.header_form button {
+    height: 3.5em;
+    width: 7em;
+
+    color: #ffffff;
+    background: #77528D;
+    border: solid;
+    border-color: #000000;
+}
+
+/* 
+/////////////////////////////////////////// WELCOME MESSAGE and SEARCH BAR ///////////////////////////////////////////
+*/
+
+.welcome {
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+    width: 100%;              
+    /* margin: 20px 0; */
+}
+
+.searchbar {
+    display: flex;            
+    flex-direction: column;   
+    align-items: center;      
+    justify-content: center;  
+    gap: 20px;                
+    width: 100%;
+    /* padding: 20px; */
+}
+
+/* 
+/////////////////////////////////////////// Footer ///////////////////////////////////////////
+*/
+
+footer {
+    --width:100%;
+    background-color: #383434;
+    list-style: none;
+    text-decoration: none;
+    overflow:hidden;
+    padding: 25px 20px;
+    margin: 0;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+footer .footer_leftsection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float:left;
+}
+
+footer .footer_leftsection .footer_text {
+    flex:1;
+}
+
+footer .footer_leftsection .footer_text h1{
+    font-size: 1.5em;
+}
+
+footer .footer_leftsection .footer_text p{
+    font-size: 1em;
+}
+
+footer .footer_leftsection .footer_icons {
+    list-style:none;
+    display:flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footer_leftsection .footer_icons li a {
+    color:inherit;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+footer .footer_rightsection {
+    font-size:0.75em;
+    float:right;
+}
+
+
+
+/* For better spacing on larger screens */
+@media (max-width: 600px) {
+    footer {
+        padding:0;
+    }
+}
+
+/*
+.authform {
+    flex:auto;
+    margin:1em;
+    padding:1em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+*/
+
+/* 
+/////////////////////////////////////////// LISTINGS SLIDERS ///////////////////////////////////////////
+*/
+
+#top_categories, #top_listings, #top_listings_user {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+}
+
+#top_categories h1, #top_listings h1, #top_listings_user h1 {
+    font-size: 2.5em;
+}
+
+.top_header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px -40px 30px;
+}
+
+.top_controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+}
+
+.top_button {
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    flex-shrink: 1;
+}
+
+.top_button form {
+    padding: 10px;
+}
+
+.top_button button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    width: 13em;
+    height: 17em;
+}
+
+.top_button button img {
+    width: 150px; 
+    height: 100px; 
+    margin-top: 20px;
+    border-radius: 15px;
+    object-fit: cover; 
+    flex-shrink: 0; 
+}
+
+.top_button button p {
+    text-decoration: double;
+    font-size: large;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3em;
+    line-height: 1.5em; 
+    margin-top: auto;
+    padding: 10px;
+    width: 100%;
+}
+
+.top_slider.hidden {
+    display: none;
+}
+
+.top_slider button {
+    border-radius:15px;
+    width:5em;
+    height:4em;
+    margin: 20px 0 20px 20px;
+    transition: all 0.3s ease;
+}
+
+.top_see_more button {
+    text-decoration: double;
+    color:white;
+    background-color: #77528D;
+    border: solid;
+    border-radius: 5px;
+    border-color: #77528E;
+    font-size:1em;
+    width:6em;
+    height:2em;
+    padding:5px;
+}
+
+.top_button::-webkit-scrollbar {
+    display: none; 
+}
+
+.top_slider button:hover {
+    background: #77528D;
+    border-color: #77528D;
+}
+
+.top_slider button img {
+    filter: invert(0.5);
+}
+
+.top_slider button:hover img {
+    filter: invert(1);
+}
+
+.top_slider.hidden {
+    visibility: hidden;
+}
+
+.top_button::-webkit-scrollbar {
+    display: none; 
+}
+
+.top_slider button:hover {
+    background: #77528D;
+    border-color: #77528D;
+}
+
+.top_slider button img {
+    filter: invert(0.5);
+}
+
+.top_slider button:hover img {
+    filter: invert(1);
+}
+
+.top_slider.hidden {
+    visibility: hidden;
+}
+
+/* 
+/////////////////////////////////////////// PROFILE ///////////////////////////////////////////
+*/
+
+.user_profile {
+    display:flex;
+    flex-direction: row;
+    /* padding: 80px 100px 20px 100px; */
+    margin: 80px 70px 0 70px;
+}
+
+.profile_pic {
+    /* padding: 80px 0px 20px 100px; */
+    margin: 0 20px 0 0;
+}
+
+.personal_info {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position:relative;
+    margin: 0 0 0 20px;
+    width:100%;
+}
+
+.edit_button {
+    display:flex;
+    justify-content: flex-end;
+}
+
+.personal_info button {
+    height: 3.5em;
+    width: 7em;
+
+    color: #ffffff;
+    background: #77528D;
+    border: solid;
+    border-color: #000000;
+}
+
+.personal_info .user_name::before,
+.personal_info .user_contacts::before {
+    width:100%;
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+}
+
+.user_name p {
+    font-size:larger;
+}
+
+.label {
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 0 20px 0 0;
+    color:azure;
+}
+
+/* 
+/////////////////////////////////////////// LISTING ///////////////////////////////////////////
+*/
+
+.listing {
+    display:grid;
+    grid-template-columns: 2fr auto;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-areas: "left right";
+    margin: 60px 40px;
+    /* gap: 20px; */
+    /* padding: 20px; */
+}
+
+.listing .listing_left_side {
+    margin:0 30px;
+    grid-area: left;
+}
+
+.listing .listing_right_side {
+    margin: 30px 0 30px 30px;
+    grid-area: right;
+}
+
+.listing .listing_right_side .profile {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 30px 10px 0;
+    padding: 20px;
+    background-color: #383434;
+    width:80%;
+    height:30%;
+    width:25em;
+    height:11em;
+}   
+
+/* .listing .listing_right_side .profile img{
+    justify-content: flex-start;
+} */
+
+
+.listing .listing_right_side .profile .profile_text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.listing .listing_right_side .profile .profile_text p{
+    flex:1;
+    justify-content: space-between;
+    font-size: small;
+}
+
+.listing .listing_right_side .price {
+    margin: 10px 30px 30px 0;
+    padding: 20px;
+    background-color: #383434;
+    width:25em;
+    height:11em;
+}
+
+.listing .listing_right_side .price .hire_button button{
+    /* display:flex; */
+    width:100%;
+    height:3em;
+    margin:10px 0;
+    color: #ffffff;
+    background: #77528D;
+    border: solid;
+    border-color: #000000;
+}
+
+.listing .listing_right_side .price .hire_button button:hover{
+    opacity: 0.75;
+}
+
+.listing .listing_right_side .price .review_button button{
+    width:100%;
+    height:3em;
+    margin:10px 0;
+    color: #ffffff;
+    background: #77528D;
+    border: solid;
+    border-color: #000000;
+}
+
+.listing .listing_right_side .price .review_button button:hover{
+    opacity: 0.75;
+}
+
+
+.listing .listing_right_side .price .message_button button{
+    width:100%;
+    height:3em;
+    /* margin: 0 0 10px 0; */
+    color: #ffffff;
+    background: #77528D;
+    border: solid;
+    border-color: #000000;
+}
+
+.listing .listing_right_side .price .message_button button:hover{
+    opacity: 0.75;
+}
+
+.listing .listing_right_side .price .view_clients_button button {
+    width:100%;
+    height:3em;
+    margin: 30px 0 0 0;
+    color: #ffffff;
+    background: #77528D;
+    border: solid;
+    border-color: #000000;
+}
+
+.listing .listing_right_side .price .view_clients_button button:hover {
+    opacity: 0.75;
+}
+
+.edit_listing .edit_button {
+    display:flex;
+    justify-content: flex-end;
+    margin: 0 65px 10px 0;
+    /* padding: 30px; */
+}
+
+.edit_listing .edit_button button {
+    height: 3.5em;
+    width: 7em;
+
+    color: #ffffff;
+    background: #77528D;
+    border: solid;
+    border-color: #000000;
+}
+
+.edit_listing .edit_button button:hover {
+    opacity: 0.75;
+}
+
+
+/*
+////////////////////////////////// Login | Register //////////////////////////////
+*/
+
+.authform{
+    width: 30%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    border: 1px solid #ccc;
+    background-color: #333333;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.authform label[for]{
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.authform input[type=number],
+.authform input[type=text],
+.authform input[type=password]{
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.authform textarea {
+    height: 150px;
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.authform .remember-label{
+    display: block;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+.authform .remember-label input[type=checkbox]{
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.authform button[type=submit]{
+    display: block;
+    width: 100%;
+    background-color: #77528D;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.authform button[type=submit]:hover{
+    opacity: 0.75;
+}
+
+.authform .container{
+    padding-top: none;
+    overflow: hidden;
+    clear: both;
+}
+
+.authform .cancelbtn{
+    width: 100%;
+    height: fit-content;
+    padding: 10px 18px;
+    background-color: rgb(203, 118, 118);
+    float: left;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.authform .cancelbtn:hover{
+    opacity: 0.75;
+}
+
+.authform .psw{
+    float: left;
+    padding-top: 8px;
+}
+.authform .psw a{
+    color: #007bff;
+    text-decoration: none;
+}
+.authform .psw a:hover{
+    text-decoration: underline;
+}
+
+/*
+  -----------------   Listings  -------------------------------
+*/
+
+.listings-content {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Sidebar Filter */
+.sidebar-filter {
+  width: 360px;
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.sidebar-filter h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.sidebar-filter ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-filter li {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.sort-dropdown-listings {
+  width: 100%;
+  margin-top: 0px;
+  padding: 8px;
+  background-color: #2c2c2c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Right Section */
+.content-listings {
+  flex-grow: 1;
+}
+
+/* Search Bar Only at Top */
+.search-sort-bar {
+  margin-bottom: 20px;
+  padding: 10px; /* From inline style */
+  background-color: #f9f9f9; /* From inline style - adjust color to fit your dark theme if needed */
+  border-radius: 5px; /* From inline style */
+}
+
+/* Cards Grid */
+.card-grid-listings {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.hire-card {
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hire-button {
+  background-color: #a259ff;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.hire-button:hover {
+  background-color: #914eea;
+}
+
+.listing-card {
+  background-color: #ffffff; /* Was #f1f1f1, white might look cleaner. Adjust if too stark. */
+  color: #333333;          /* Dark grey text for better readability on white, was black. */
+  border: 1px solid #e0e0e0; /* Subtle border, was #ddd inline */
+  border-radius: 8px;       /* Slightly less rounded than 20px, more modern. Was 20px, inline had 5px. */
+  padding: 15px;            /* A bit more padding, was 10px. */
+  margin-bottom: 15px;      /* Spacing between cards if they stack vertically (though grid handles horizontal) */
+  text-align: left;         /* Changed from center for better readability of text blocks */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  display: flex;            /* Added to help with internal alignment if needed */
+  flex-direction: column;   /* Stack image and text vertically */
+  justify-content: space-between; /* Pushes content apart if card has fixed height, or helps if variable height */
+  overflow: hidden;         /* Good for ensuring content stays within rounded borders */
+}
+
+.listing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Slightly softer shadow */
+}
+
+.listing-card img {
+  width: 100%;              /* Make image responsive within its container */
+  height: 160px;            /* Fixed height for images for uniformity. Adjust as needed. */
+  object-fit: cover;        /* Ensures image covers the area, might crop. Use 'contain' if you want to see full image. */
+  border-radius: 4px;       /* Match card's subtle rounding. Was 10px, inline had 3px. */
+  margin-bottom: 12px;      /* Space below image, was 10px. */
+}
+
+/* Specific styles for text elements within the card */
+/* Note: .listing-title in PHP is an <h4>, others are <p> */
+.listing-card .listing-title { /* Targets the <h4> with this class */
+  font-size: 1.1em;       /* Was 16px (inline default) */
+  font-weight: 600;       /* Semi-bold, was bold via generic p */
+  margin-top: 0;
+  margin-bottom: 8px;     /* Was 5px inline */
+  line-height: 1.3;
+  /* color: #333333; (Inherited from .listing-card) */
+  /* Make sure this text doesn't overflow too much */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.listing-card .listing-category {
+  font-size: 0.85em;      /* Was 0.9em inline */
+  color: #666666;         /* Lighter grey, was #555 inline */
+  margin-bottom: 8px;     /* Was 5px inline */
+  font-weight: 400;       /* Regular weight, not bold */
+}
+
+.listing-card .listing-price {
+  font-size: 1em;         /* Was default p (14px) */
+  font-weight: 700;       /* Bold, same as generic p */
+  color: #007bff;         /* Example: A primary color for price. Adjust. */
+  margin-top: auto;       /* Pushes price to the bottom if card uses flex and has extra space */
+  margin-bottom: 0;
+  text-align: right;      /* Align price to the right */
+}
+
+@media (max-width: 400px) {
+  .card-grid-listings {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* 
+/////////////////////////////////////////// CHECKOUT ///////////////////////////////////////////
+*/
+
+.billing_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  margin-top: 30px;
+  background: #3a3a3a;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.billing_info h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 0.5rem;
+}
+
+.billing_info label {
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+  align-self: center;
+}
+
+.billing_info input,
+.billing_info select {
+  padding: 0.6rem;
+  font-size: 0.85rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.consent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.consent label {
+    display: flex;
+    align-items: center; 
+    gap: 0.8rem;
+    cursor: pointer;
+}
+
+.consent label span {
+    display: inline-block;
+}
+
+.consent input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: #7b7b7b;
+}
+
+.collapsible {
+    background-color: #292929;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible:hover {
+    background-color: #626262;
+}
+
+.collapsible-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapsible + .content {
+    overflow: hidden;
+    background-color: #292929;
+    /* margin-bottom: 10px; */
+    height: 0;
+    transition: height 0.3s ease;
+    will-change: height;
+}
+
+.collapsible.active + .content {
+    height: auto;          
+}
+
+.card_control {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+.ccard_bottom_part {
+    display: flex;
+    gap: 10px;
+}
+
+.ccard_left_side, .ccard_right_side {
+    flex: 1;
+}
+
+.ccard_left_side {
+    margin:0 20px 0 0;
+}
+
+.ccard_right_side {
+    margin:0 0 0 20px;
+}
+
+.content_inner {
+    margin:20px;
+    padding-right:20px;
+}
+
+.content .input {
+    position: relative;
+}
+
+.content .input i {
+    position: absolute;
+    top: 16px;
+    left: 11px;
+    color: #989898;
+}
+
+.content .input input {
+    text-indent: 25px;
+}
+
+.order_info {
+    margin: 0 60px;
+    padding: 20px;
+    background: #f5f5f5;
+    border: 2px solid #858585;
+    color:#000000;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.order_info h2 {
+    border-bottom: 2px solid #7b7b7b;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.order_details {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.order_image {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.order_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.order_title h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.delivery-time {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.order_provider_info {
+    margin: 25px 0;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.order_provider_info h3 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.provider-details p {
+    margin: 8px 0;
+    color: #444;
+}
+
+.order_info_price {
+    display:flex;
+    justify-content: row;
+    border-top: 2px solid #7b7b7b;
+    padding-top: 15px;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.total-price {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin: 0;
+}
+
+.checkout_confirmation{
+    display:flex;
+    /* justify-content: flex-start; */
+    margin:0 120px 0 0; 
+    /*padding: 0 18px 0 0; */
+    /* padding: 15px; */
+    /* padding-top: 15px;
+    margin-top: 20px; */
+}
+
+.checkout_confirmation .continue_button button{
+    height: 3.5em;
+    width: 7em;
+
+    color: #ffffff;
+    background: #77528D;
+    border: solid;
+    border-color: #000000;
+}
+
+.checkout_confirmation .continue_button button:hover {
+    opacity: 0.75;
+}
+
+@media (max-width: 768px) {
+    .order_info {
+        margin: 0 20px;
+        padding: 15px;
+    }
+    
+    .order_details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .order_image {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+/* 
+/////////////////////////////////////////// CHECKOUT ///////////////////////////////////////////
+*/
+
+.leave_review {
+    background: #2c2c2c;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem;
+}
+
+.leave_review textarea {
+    width: 98.5%;
+    padding: 0.6rem;
+    /* margin: 0.5rem; */
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.star_rating_container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 20px 0;
+}
+
+.star_rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5px;
+}
+
+.star_rating input[type="radio"] {
+    display: none;
+}
+
+.star_rating label {
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+}
+
+.star_rating input[type="radio"]:checked ~ label {
+    color: #ffc107;
+}
+
+.star_rating label:hover,
+.star_rating label:hover ~ label {
+    color: #ffdb58;
+}
+
+.leave_review .leave_review_button {
+    display:flex;
+    justify-content: flex-end;
+    margin-top:20px;
+}
+
+.leave_review .leave_review_button button{
+    height: 3.5em;
+    width: 8em;
+
+    color: #ffffff;
+    background: #77528D;
+    border: solid;
+    border-color: #000000;
+}
+
+.leave_review .leave_review_button button:hover {
+    opacity: 0.75;
+}
+
+/* 
+/////////////////////////////////////////// REVIEWS ///////////////////////////////////////////
+*/
+
+.reviews_title {
+    margin: 0 0 0 60px;
+}
+
+.reviews {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 60px;
+    padding: 10px 20px;
+    background: rgb(84, 84, 84);
+    border-radius: 10px;
+    border:#000000;
+    border-style: solid;
+}
+
+.reviews .star_ratings .filled{
+    color: #ffc107;
+}
+
+.reviews .star_ratings .empty{
+    color: gray;
+}
+
+/* 
+/////////////////////////////////////////// OFFERS ///////////////////////////////////////////
+*/
+
+.manage-offers {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.offer-card {
+    background-color: #383434;
+    border: 1px solid #575757;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.offer-image {
+    flex: 0 0 200px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.offer-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offer-details {
+    flex: 2;
+}
+
+.offer-actions {
+    flex: 1;
+    max-width: 250px;
+}
+
+.offer-title {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.offer-meta {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+
+.offer-status {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-pending {
+    background-color: #77528D;
+    color: white;
+}
+
+.status-accepted {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-declined {
+    background-color: #dc3545;
+    color: white;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.action-buttons button {
+    background-color: #77528D;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.message-button {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+.message-button button {
+    background-color: #77528D;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.empty-message {
+    color: #888;
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.1rem;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .offer-card {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .offer-image {
+        width: 100%;
+        flex: none;
+        height: 200px;
+    }
+    
+    .offer-content {
+        flex-direction: column;
+        width: 100%;
+        gap: 1.5rem;
+    }
+    
+    .offer-details {
+        width: 100%;
+    }
+    
+    .offer-actions {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* 
+/////////////////////////////////////////// ADMIN ///////////////////////////////////////////
+*/
+
+.admin-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #2c2c2c;
+    border-radius: 12px;
+}
+
+.admin-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #383434;
+    border-radius: 8px;
+}
+
+.admin-section h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.3em;
+}
+
+.admin-section form {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.admin-section input[type="text"],
+.admin-section input[type="number"] {
+    flex: 1;
+    padding: 0.8rem;
+    background-color: #444;
+    border: 1px solid #575757;
+    border-radius: 6px;
+    color: white;
+}
+
+.message {
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #77528D;
+    border-radius: 6px;
+    color: white;
+}
+
+/* Admin Page Buttons */
+.admin-section button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: opacity 0.3s ease;
+}
+
+.admin-section .confirmbtn {
+    background-color: #77528D;
+    color: white;
+}
+
+.admin-section .cancelbtn {
+    background-color: #77528D;
+    color: white;
+}
+
+.admin-section .confirmbtn:hover,
+.admin-section .cancelbtn:hover {
+    opacity: 0.85;
+}
+
+/* 
+/////////////////////////////////////////// MESSAGES ///////////////////////////////////////////
+*/
+
+.chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.chat-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+}
+
+.chat-message {
+    max-width: 70%;
+    padding: 0.5rem 1rem;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.chat-message.sent {
+    background-color: #77528D;
+    align-self: flex-end;
+    margin-left: auto;
+    text-align: right;
+}
+
+.chat-message.received {
+    background-color: #77528D;
+    align-self: flex-start;
+    margin-right: auto;
+    text-align: left;
+}
+
+.message-text {
+    margin: 0;
+}
+
+.message-date {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 4px;
+    display: block;
+}
+
+.chat-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chat-form textarea {
+    flex-grow: 1;
+    resize: none;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.chat-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #77528D;
+    color: white;
+    cursor: pointer;
+}
